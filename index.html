@@ -27,6 +27,41 @@
 .s-section__head h2 {
   text-shadow: 0 1px 0 #22352b, 0 2px 0 #1a2c23, 0 3px 0 #15241d, 0 6px 12px rgba(0,0,0,.45);
 }
+/* Директор и название кафе на первом экране */
+.s-director {
+  display: flex; align-items: center; gap: 14px;
+  margin: 0 0 18px;
+}
+.s-director img {
+  width: 88px; height: 88px; border-radius: 50%;
+  object-fit: cover; object-position: 50% 20%;
+  border: 2px solid var(--c-accent);
+  box-shadow: 0 4px 14px rgba(0,0,0,.4);
+}
+.s-director figcaption {
+  font: 500 13px/1.4 var(--f-text);
+  color: var(--c-ink-soft);
+  text-transform: uppercase; letter-spacing: .06em;
+}
+.s-director figcaption b {
+  color: var(--c-ink); font-size: 18px; font-weight: 600;
+  text-transform: none; letter-spacing: 0;
+}
+.s-brand {
+  font: 700 clamp(30px, 4.2vw, 46px)/1.1 var(--f-display);
+  color: var(--c-ink); margin: 0 0 6px;
+  text-shadow: 0 1px 0 #22352b, 0 2px 0 #1d2f26, 0 3px 0 #182820, 0 4px 0 #13221b, 0 8px 18px rgba(0,0,0,.5);
+}
+.s-brand-sub {
+  font: 600 14px/1.3 var(--f-text);
+  color: var(--c-accent);
+  letter-spacing: .12em; text-transform: uppercase;
+  margin: 0 0 16px;
+}
+/* на телефоне первым идёт блок с директором, фото интерьера – после текста */
+@media (max-width: 860px) {
+  .s-hero__img { order: 0; }
+}
 </style>
 </head>
 <body class="s-lite" id="top" data-wa="" data-tg="" data-max="">
@@ -40,7 +75,9 @@
 <main>
   <section class="s-hero">
     <div class="s-hero__text">
-      <p class="s-eyebrow">Кофейня-пекарня в ЖК Татьянин Парк · Солнцево</p>
+      <figure class="s-director"><img src="assets/director.webp" alt="Генеральный директор Жанна Тумасян"><figcaption>Генеральный директор<br><b>Жанна Тумасян</b></figcaption></figure>
+      <p class="s-brand">Кафе Хлеботека</p>
+      <p class="s-brand-sub">Кофейня · Кондитерская · Пекарня</p>
       <h1>Свежий хлеб и круассаны в Солнцево – рядом с домом</h1>
       <p class="s-lead">Пекарня, кондитерская и кофейня в ЖК Татьянин Парк. Бездрожжевой хлеб, чиабатта и французские багеты, кофе с собой. Открыто до 22:00.</p>
       <div class="s-actions"><a class="s-btn" href="#contacts">Позвонить</a><a class="s-link" href="#prices">Меню</a></div>
