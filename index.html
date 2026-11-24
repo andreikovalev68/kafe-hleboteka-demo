@@ -14,18 +14,36 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%276%27 y=%276%27 width=%2720%27 height=%2720%27 rx=%275%27 fill=%27%23e8b4ae%27/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Tenor+Sans&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root { --c-canvas: #0f1a14; --c-surface: #182520; --c-ink: #f4ece7; --c-ink-soft: #b1b7ac; --c-accent: #e8b4ae; --c-accent-ink: #2b1517; --c-accent-deep: #e8b4ae; --f-display: "Tenor Sans", "Trebuchet MS", "Segoe UI", system-ui, sans-serif; --f-text: "Onest", "Segoe UI", system-ui, sans-serif; --h1k: 1; }
 </style>
 <link rel="stylesheet" href="style-lite.css">
 <style>
-/* 3D-заголовки: мягкие слои в палитре сайта (стиль Андрея) */
+/* 3D-заголовки: жирный объём через слоёные тени в палитре сайта (железное правило Андрея) */
 .s-hero h1 {
-  text-shadow: 0 1px 0 #22352b, 0 2px 0 #1d2f26, 0 3px 0 #182820, 0 4px 0 #13221b, 0 8px 18px rgba(0,0,0,.5);
+  font-family: "Playfair Display", var(--f-display);
+  font-weight: 800;
+  text-shadow:
+    0 1px 0 #2a3f33,
+    0 2px 0 #22352b,
+    0 3px 0 #1d2f26,
+    0 4px 0 #182820,
+    0 5px 0 #13221b,
+    0 6px 0 #0d1a12,
+    0 8px 2px rgba(0,0,0,.45),
+    0 16px 26px rgba(0,0,0,.5);
 }
 .s-section__head h2 {
-  text-shadow: 0 1px 0 #22352b, 0 2px 0 #1a2c23, 0 3px 0 #15241d, 0 6px 12px rgba(0,0,0,.45);
+  font-family: "Playfair Display", var(--f-display);
+  font-weight: 700;
+  text-shadow:
+    0 1px 0 #2a3f33,
+    0 2px 0 #22352b,
+    0 3px 0 #1d2f26,
+    0 4px 0 #182820,
+    0 5px 0 #13221b,
+    0 7px 14px rgba(0,0,0,.5);
 }
 /* Директор и название кафе на первом экране */
 .s-director {
@@ -48,15 +66,30 @@
   text-transform: none; letter-spacing: 0;
 }
 .s-brand {
-  font: 700 clamp(30px, 4.2vw, 46px)/1.1 var(--f-display);
-  color: var(--c-ink); margin: 0 0 6px;
-  text-shadow: 0 1px 0 #22352b, 0 2px 0 #1d2f26, 0 3px 0 #182820, 0 4px 0 #13221b, 0 8px 18px rgba(0,0,0,.5);
+  font: 800 clamp(32px, 4.6vw, 54px)/1.08 "Playfair Display", var(--f-display);
+  color: var(--c-ink); margin: 0 0 8px;
+  text-shadow:
+    0 1px 0 #33473a,
+    0 2px 0 #2a3f33,
+    0 3px 0 #22352b,
+    0 4px 0 #1d2f26,
+    0 5px 0 #182820,
+    0 6px 0 #13221b,
+    0 7px 0 #0d1a12,
+    0 9px 2px rgba(0,0,0,.45),
+    0 18px 30px rgba(0,0,0,.55);
 }
 .s-brand-sub {
-  font: 600 14px/1.3 var(--f-text);
+  font: 700 15px/1.3 var(--f-text);
   color: var(--c-accent);
-  letter-spacing: .12em; text-transform: uppercase;
-  margin: 0 0 16px;
+  letter-spacing: .16em; text-transform: uppercase;
+  margin: 0 0 18px;
+  text-shadow:
+    0 1px 0 #d89c96,
+    0 2px 0 #c07f79,
+    0 3px 0 #a4635e,
+    0 4px 0 #884945,
+    0 6px 12px rgba(0,0,0,.5);
 }
 /* на телефоне первым идёт блок с директором, фото интерьера – после текста */
 @media (max-width: 860px) {
